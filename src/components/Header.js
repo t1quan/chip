@@ -2,11 +2,7 @@ import { useRef, useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
-import { RiCloseLargeFill } from "@remixicon/react";
-import { RiFacebookCircleLine } from "@remixicon/react";
-import { RiInstagramLine } from "@remixicon/react";
-import { RiTwitterXLine } from "@remixicon/react";
-import { RiApps2Line } from "@remixicon/react";
+import { RiCloseLargeFill, RiFacebookCircleLine, RiInstagramLine, RiTwitterXLine, RiApps2Line } from "@remixicon/react";
 
 import '../scss/Header.scss';
 
@@ -31,11 +27,11 @@ function Header() {
 
                 <div className="nav__menu" id="nav__menu" ref={navRef}>
                     <ul className="nav__list">
-                        <li onClick={showNav}><Link to="/" className="nav__link">Home</Link></li>
-                        <li onClick={showNav}><Link to="/" className="nav__link">Favorites</Link></li>
-                        <li onClick={showNav}><Link to="/" className="nav__link">Care</Link></li>
-                        <li onClick={showNav}><Link to="/product" className="nav__link">Products</Link></li>
-                        <li onClick={showNav}><Link to="/" className="nav__link">Contact</Link></li>
+                        <li onClick={showNav}><a href="/#" className="nav__link">Home</a></li>
+                        <li onClick={showNav}><a href="/#favor" className="nav__link">Favorites</a></li>
+                        <li onClick={showNav}><a href="/#care" className="nav__link">Care</a></li>
+                        <li onClick={showNav}><a href="/#products" className="nav__link">Products</a></li>
+                        <li onClick={showNav}><a href="/#contact" className="nav__link">Contact</a></li>
                     </ul>
 
                     <div className="nav__close" id="nav__close" onClick={showNav}>

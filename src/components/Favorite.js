@@ -21,9 +21,14 @@ function Favorite() {
                     <Swiper
                         // loop={true}
                         spaceBetween={10}
-                        slidesPerView={1.7}
+                        slidesPerView={1.6}
                         centeredSlides={true}
                         grabCursor={true}
+                        breakpoints={{
+                            540: {
+                                slidesPerView: 3,
+                            },
+                        }}
                     >
                         <SwiperSlide>
                             <article className="favor__article">

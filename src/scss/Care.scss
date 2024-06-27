@@ -1,0 +1,59 @@
+@import "./Mixin.scss";
+
+#care {
+	background: var(--first-color-dark);
+
+	.care__container {
+		row-gap: 3rem;
+		padding-block: 1rem 2rem;
+
+		.care__list {
+			display: grid;
+			row-gap: 1.25rem;
+
+			.care__item {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+
+				svg {
+					width: 23px;
+					color: var(--second-color);
+					flex-shrink: 0;
+					height: auto;
+				}
+
+				@include minWidth1150 {
+					column-gap: 1.5rem;
+
+					svg {
+						width: 33px;
+					}
+				}
+			}
+		}
+
+		.care__img {
+			width: 320px;
+			justify-self: center;
+			filter: var(--shadow-img);
+
+			@include minWidth1150 {
+				width: 550px;
+				order: -1;
+			}
+		}
+
+		@include minWidth540 {
+			grid-template-columns: 370px;
+			justify-content: center;
+		}
+
+		@include minWidth1150 {
+			grid-template-columns: 500px 410px;
+			column-gap: 6rem;
+			align-items: center;
+			padding-block: 4rem;
+		}
+	}
+}

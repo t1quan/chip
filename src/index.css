@@ -110,62 +110,40 @@ img {
 	overflow: hidden;
 }
 
-/*=============== HEADER & NAV ===============*/
+::-webkit-scrollbar {
+	width: 0.6rem;
+	background: hsl(170, 50%, 30%);
+}
+
+::-webkit-scrollbar-thumb {
+	background: hsl(170, 50%, 20%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: hsl(170, 50%, 15%);
+}
 
 
-/* Navigation for mobile devices */
+@media screen and (max-width: 340px) {
+	.container {
+		margin-inline: 1rem;
+	}
 
+	.section__title {
+		font-size: var(--h2-font-size);
+	}
+}
 
-/* Show menu */
+@media screen and (min-width: 1150px) {
+	.container {
+		margin-inline: auto;
+	}
 
+	.section {
+		padding-block: 7rem 2rem;
+	}
 
-/* Shadow header */
-
-
-/* Active link */
-
-
-/*=============== HOME ===============*/
-
-
-/*=============== BUTTON ===============*/
-
-
-/*=============== FAVORITES ===============*/
-
-
-/* Swiper class */
-
-
-/*=============== CARE ===============*/
-
-
-/*=============== BANNER ===============*/
-
-
-/*=============== PRODUCTS ===============*/
-
-
-/*=============== CONTACT ===============*/
-
-
-/*=============== FOOTER ===============*/
-
-
-/*=============== SCROLL BAR ===============*/
-
-
-/*=============== SCROLL UP ===============*/
-
-
-/* Show Scroll Up */
-
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-
-
-/* For medium devices */
-
-
-/* For large devices */
+	.section__title {
+		margin-bottom: 2rem;
+	}
+}

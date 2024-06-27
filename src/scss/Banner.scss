@@ -1,3 +1,5 @@
+@import "./Mixin.scss";
+
 #banner {
 	.banner__container {
 		padding-top: 1.5rem;
@@ -13,10 +15,22 @@
 				line-height: 100%;
 				margin-bottom: 1rem;
 				text-shadow: var(--shadow-text);
+
+				@include maxWidth340 {
+					font-size: 3rem;
+				}
+
+				@include minWidth1150 {
+					margin-bottom: 1.5rem;
+				}
 			}
 
 			.banner__description {
 				margin-bottom: 2.5rem;
+
+				@include minWidth1150 {
+					margin-bottom: 4rem;
+				}
 			}
 
 			img.banner__meat {
@@ -25,6 +39,11 @@
 				top: 9rem;
 				right: 0;
 				opacity: 0.5;
+
+				@include minWidth1150 {
+					width: 80px;
+					top: 13rem;
+				}
 			}
 
 			.banner__button {
@@ -48,6 +67,20 @@
 						color: var(--second-color);
 					}
 				}
+
+				@include maxWidth340 {
+					flex-direction: column;
+					row-gap: 1rem;
+				}
+
+				@include minWidth1150 {
+					justify-content: initial;
+					column-gap: 1.5rem;
+				}
+			}
+
+			@include minWidth1150 {
+				text-align: initial;
 			}
 		}
 		.banner__images {
@@ -64,6 +97,14 @@
 				box-shadow: inset var(--shadow-circle);
 				display: grid;
 				place-items: center;
+
+				@include maxWidth340 {
+					width: 250px;
+				}
+
+				@include minWidth1150 {
+					width: 550px;
+				}
 			}
 
 			.banner__subcircle {
@@ -72,6 +113,14 @@
 				background-color: var(--second-color);
 				border-radius: 50%;
 				box-shadow: inset var(--shadow-circle);
+
+				@include maxWidth340 {
+					width: 200px;
+				}
+
+				@include minWidth1150 {
+					width: 430px;
+				}
 			}
 
 			img {
@@ -82,6 +131,14 @@
 				&.banner__img {
 					rotate: 10deg;
 					width: 250px;
+
+					@include maxWidth340 {
+						width: 200px;
+					}
+
+					@include minWidth1150 {
+						width: 400px;
+					}
 				}
 
 				&.banner__chip-1 {
@@ -111,7 +168,27 @@
 				&.banner__leaf {
 					left: -0.75rem;
 				}
+
+				@include maxWidth340 {
+					width: 45px;
+				}
+
+				@include minWidth1150 {
+					width: 95px;
+				}
 			}
+		}
+
+		@include minWidth540 {
+			grid-template-columns: 370px;
+			justify-content: center;
+		}
+
+		@include minWidth1150 {
+			grid-template-columns: 420px 585px;
+			align-items: center;
+			column-gap: 6rem;
+			padding-top: 5rem;
 		}
 	}
 }

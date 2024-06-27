@@ -12,6 +12,16 @@ import cheese from './cheese.png'
 import favorChip1 from './favorite-chips-1.png';
 import favorChip2 from './favorite-chips-2.png';
 import favorChip3 from './favorite-chips-3.png';
+import careChip from './care-chips.png';
+import productChip1 from './product-chips-1.png';
+import productChip2 from './product-chips-2.png';
+import productChip3 from './product-chips-3.png';
+import productChip4 from './product-chips-4.png';
+import productChip5 from './product-chips-5.png';
+import crab from './crab.png';
+import hamburger from './hamburger.png';
+import shrimp from './shrimp.png';
+import contactMan from './contact-man.png';
 
 export const assets = {
     meat,
@@ -27,5 +37,15 @@ export const assets = {
     cheese,
     favorChip1,
     favorChip2,
-    favorChip3
+    favorChip3,
+    careChip,
+    productChip1,
+    productChip2,
+    productChip3,
+    productChip4,
+    productChip5,
+    crab,
+    hamburger,
+    shrimp,
+    contactMan
 };

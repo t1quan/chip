@@ -1,3 +1,5 @@
+@import "./Mixin.scss";
+
 #favor {
 	.favor__container {
 		row-gap: 3rem;
@@ -14,18 +16,30 @@
 					position: absolute;
 					width: 40px;
 					opacity: 0.5;
+
+					@include minWidth1150 {
+						width: 80px;
+					}
 				}
 
 				&.favor__cheese-1 {
 					top: 2rem;
 					right: -1rem;
 					rotate: -15deg;
+
+					@include minWidth1150 {
+						right: -18rem;
+					}
 				}
 
 				&.favor__cheese-2 {
 					bottom: -2rem;
 					left: -0.75rem;
 					transform: scaleX(-1) rotate(45deg);
+
+					@include minWidth1150 {
+						left: -18rem;
+					}
 				}
 			}
 		}
@@ -47,6 +61,14 @@
 						filter: var(--shadow-img);
 						scale: 0;
 						transition: scale 0.4s 0.1s;
+
+						@include maxWidth340 {
+							width: 60px;
+						}
+
+						@include minWidth1150 {
+							width: 110px;
+						}
 					}
 
 					&.favor__leaf-1 {
@@ -80,6 +102,26 @@
 					}
 				}
 			}
+
+			@include minWidth540 {
+				max-width: 600px;
+				overflow-x: clip;
+				justify-self: center;
+			}
+
+			@include minWidth1150 {
+				max-width: 1000px;
+			}
+		}
+
+		@include minWidth540 {
+			grid-template-columns: 370px;
+			justify-content: center;
+		}
+
+		@include minWidth1150 {
+			grid-template-columns: 520px;
+			row-gap: 4rem;
 		}
 	}
 }

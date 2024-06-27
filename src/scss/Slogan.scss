@@ -1,0 +1,54 @@
+@import "./Mixin.scss";
+
+#slogan {
+	padding-top: 3rem;
+
+	.slogan__container {
+		background: var(--second-color);
+		padding: 1rem 1.5rem;
+
+		.slogan__list {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+			justify-content: center;
+
+			.slogan__item {
+				color: var(--second-color-dark);
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+
+				span {
+					font: var(--small-font-size) var(--second-font);
+				}
+
+				svg {
+					width: 20px;
+					height: auto;
+					flex-shrink: 0;
+				}
+
+				@include minWidth1150 {
+					column-gap: 1rem;
+
+					span {
+						font-size: var(--h1-font-size);
+					}
+
+					svg {
+						width: 60px;
+					}
+				}
+			}
+
+			@include minWidth1150 {
+				column-gap: 6.5rem;
+			}
+		}
+	}
+
+	@include minWidth1150 {
+		padding-top: 4rem;
+	}
+}

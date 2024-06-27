@@ -1,7 +1,19 @@
 import { assets } from "../assets/Assets";
 import '../scss/Banner.scss';
+// import ScrollReveal from "scrollreveal";
+// import { useRef, useEffect } from "react";
 
 function Banner() {
+    // const animate = useRef();
+    // useEffect(() => {
+    //     ScrollReveal().reveal(animate.current, {
+    //         origin: 'top',
+    //         distance: '60px',
+    //         duration: '2500',
+    //         delay: 300
+    //     })
+    // }, []);
+
     return (
         <div id="banner" className="banner section">
             <div className="banner__container container grid">
